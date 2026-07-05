@@ -55,7 +55,7 @@ class TaskUpdate(BaseModel):
 @app.patch("/tasks/{task_id}")
 def update_task(task_id: int, update_data: TaskUpdate, session: Session = Depends(get_session)):
     
-    task = session.get(models.Task, task_id)
+    task = session.get(models.Task, task_id) 
 
     if not task:
         raise HTTPException(status_code = 404, detail="Task not found")
