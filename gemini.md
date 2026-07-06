@@ -185,21 +185,36 @@ Always verify our current day before suggesting the next step.
 6. APIRouter Refactoring
 7. Pull Request Workflow
 
-### Phase 2 – Frontend (Days 8–14)
+### Phase 2: The Frontend Face (Days 8–14)
+* Day 8: React Initialization & Vite
+* Day 9: Components & Props
+* Day 10: State & Hooks (useState)
+* Day 11: The Bridge (Fetch & CORS)
+* Day 12: Forms & POST Requests
+* Day 13: UI/UX Polish with Tailwind
+* Day 14: Client-Side Routing (react-router-dom)
 
-React, Vite, Components, State, Fetch, Forms, Tailwind, React Router.
+### Phase 3: The AI Integration (Days 15–21)
+* Day 15: OpenAI API & Token Economics
+* Day 16: Structured Outputs (Extracting JSON from text)
+* Day 17: Saving AI Data (Automated database rows)
+* Day 18: Vector Math & Embeddings
+* Day 19: Vector Databases (pgvector in Supabase)
+* Day 20: Building RAG (Chat with documents)
+* Day 21: Streaming Responses & Basic Agents
 
-### Phase 3 – AI Integration (Days 15–21)
+### Phase 4: Production Hardening (Days 22–26)
+* Day 22: Authentication Mechanics (JWT)
+* Day 23: Login Endpoints & Frontend Guards
+* Day 24: Caching AI Responses
+* Day 25: Webhooks & Event-Driven Architecture
+* Day 26: Containerization (Docker Basics)
 
-OpenAI API, Structured Outputs, Saving AI Data, Embeddings, pgvector, RAG, Streaming & Basic Agents.
-
-### Phase 4 – Production Hardening (Days 22–26)
-
-JWT, Login, Caching, Webhooks, Docker.
-
-### Phase 5 – Launch (Days 27–30)
-
-Production DB, Render, Vercel, End-to-End Testing.
+### Phase 5: The Launch (Days 27–30)
+* Day 27: Database Production Prep
+* Day 28: Backend Deployment (Render)
+* Day 29: Frontend Deployment (Vercel)
+* Day 30: End-to-End Testing & Review
 
 ---
 
