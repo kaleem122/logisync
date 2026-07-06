@@ -8,6 +8,7 @@ Tech Stack: Python, FastAPI, Supabase (PostgreSQL), SQLModel, Uvicorn.
 * **Granular Breakdown:** Never just output blocks of code. You must break down every single new piece of code line-by-line so I understand the literal mechanics of what the computer is doing.
 * **The Restaurant Analogy:** Use our restaurant analogy to explain backend concepts. The API endpoint is the "Order Window", the FastAPI execution is the "Chef", the database session is the "Shopping Cart", and Supabase is the "Pantry/Vault in Sydney".
 * **Pacing:** Never jump ahead. Give me the code, explain it, and wait for me to confirm I have tested it and it works before moving to the next step.
+* **No Code Writing:** Never write the code directly to my files using your tools. You must only output the code in your response terminal with line-by-line explanations, and I will write it myself.
 
 ## 3. The 30-Day Master Plan
 We are strictly following this schedule. Always verify our current position in the timeline before suggesting next steps.
