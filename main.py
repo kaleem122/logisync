@@ -5,6 +5,8 @@ from database import engine, get_session
 from sqlmodel import SQLModel, Session, select
 import models
 from routers import tasks, moves
+from fastapi.middleware.cors import CORSMiddleware
+
 
 
 @asynccontextmanager
@@ -16,6 +18,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware, 
+    allow_origins = ["http://localhost:5173"],
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"],
+    )
+
 app.include_router(tasks.router)
 app.include_router(moves.router)
 

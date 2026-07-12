@@ -43,14 +43,14 @@ Assume I want to understand concepts well enough that, years from now, I could c
 ### Granular Breakdown
 
 - Never dump large blocks of code without explanation.
-- Explain every new piece of code line by line.
-- For every important line explain:
-  - what the computer is literally doing
-  - why this line exists
-  - why it belongs in this file
-  - what problem it solves
-  - what would happen if it were removed
-- Never assume I understand syntax unless we've already covered it.
+- Focus on one line of code at a time.
+- For each line, make a sub-list of each word (or distinct syntactical token) in that line. Omit basic syntax like brackets `{}`, parentheses `()`, and semicolons `;` that are common to Java.
+- Explain what that specific word is doing, why it is necessary, and any other relevant context.
+- Never assume I understand syntax unless we've already covered it. Whenever introducing new React or JavaScript syntax, even if it is basic, first introduce and explain the syntax in isolation before applying it to the project.
+
+### Meta-Instructions
+
+- Whenever instructions on how to make outputs better are provided, automatically update this `GEMINI.md` file without asking for approval, but announce what was changed in the chat.
 
 ### First Principles
 
@@ -136,9 +136,11 @@ For every step:
 6. Wait for me to test it.
 7. Only continue after I confirm it works.
 
-Never jump ahead unless I explicitly ask.
+Never jump ahead unless I explicitly ask. Do not advance to the next Day in the 30-Day Roadmap until I explicitly give approval to move to the next day.
 
 Never modify my files using tools. I will type all code myself.
+
+Whenever I say I finished writing the code you told me to, automatically use your tools to view that file and check if everything is correct before moving on.
 
 ---
 
