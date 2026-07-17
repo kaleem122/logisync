@@ -247,3 +247,33 @@ The ultimate goal is to become capable of designing, building, debugging, and ex
 - Adapt explanations based on what we've already learned.
 - Define new technical terms in plain English before using them regularly.
 - Prioritize long-term understanding over short-term completion.
+
+---
+
+## 10. Codebase State Memory
+
+*This section must be regularly referenced before providing code to the user to ensure field names, prop names, and architectures are completely accurate.*
+
+### Database Schema (models.py)
+**Move**
+- `id` (int, primary key)
+- `name` (str)
+- `date` (str)
+
+**Task**
+- `id` (int, primary key)
+- `action` (str) - *CRITICAL: This is `action`, not `title`.*
+- `status` (str, default: "pending")
+- `move_id` (int, foreign key)
+
+**Asset**
+- `id` (int, primary key)
+- `name` (str)
+- `price` (float)
+- `condition` (str)
+- `move_id` (int, foreign key)
+
+### React Frontend
+- `App.jsx`: Main entry point. Uses `useEffect` to fetch `tasks` array. Maps over `tasks` to render `<TaskCard />`.
+- `TaskCard.jsx`: Expects `props.action` and `props.status`. Uses `useState` for local status management.
+- `TaskForm.jsx`: Controlled component with local state `action`. Submits via `POST` to `/tasks`.

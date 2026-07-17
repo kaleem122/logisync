@@ -8,10 +8,11 @@ function TaskCard(props) {
         setCurrentStatus("completed");
     }
     return (
-        <div style = {{border: "1px solid gray", margin: "10px", padding: "10px", borderRadius: "8px"}}>
-            <h2>{props.action}</h2>
-            <p>Status: {currentStatus}</p>
-            <button onClick = {markAsDone}>Mark as Done</button>
+        <div className = "bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 hover:scale-105 transition duration-300">
+            <h2 className = "text-xl font-bold text-white mb-2">{props.action}</h2>
+            <p className = "text-slate-400 mb-4">Status: {currentStatus}</p>
+            <button onClick={markAsDone} className = "bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2 px-4 rounded-lg transition">Mark as Done</button>
+
         </div>
     )
 }

@@ -1,29 +1,27 @@
-import TaskCard from "./components/TaskCard"
-import TaskForm from "./components/TaskForm"
-import {useState, useEffect} from 'react';
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'; 
+import Tasks from './pages/Tasks';
 
-
-function App(){
-
-  const [tasks, setTasks] = useState([])
-
-  useEffect(() => {
-    fetch("http://localhost:8000/tasks")
-    .then(response => response.json())
-    .then(data => setTasks(data));
-  }, []);
-  function handleTaskAdded(newTask){
-    setTasks([...tasks, newTask]);
-  }
+function App() {
   return(
-    <div>
-      <h1>Logisync Relocation Manager</h1>
-      <TaskForm onTaskAdded = {handleTaskAdded}/>
-      {tasks.map(task => (
-        <TaskCard key = {task.id} action = {task.action} status = {task.status} />
-      ))}
+    <BrowserRouter>
+      <div className = "min-h-screen bg-slate-900 text-slate-100 p-8 font-sans">
+        <h1 className = "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 tracking-tight"> Logisync Relocation Manager</h1>
+        <nav className="mt-4 space-x-6">
+          <Link to = "/" className = "text-indigo-400 font-bold hover:text-indigo-300 transition">Tasks</Link>
+          <Link to = "/assets" className = "text-slate-400 hover:text-white transition">Assets</Link>
+        </nav>
 
-    </div>
-  )
+
+      
+
+      <Routes>
+        <Route path = "/" element = {<Tasks/>}/>
+        <Route path = "/assets" element = {<h2>Assets Page coming soon</h2>}/>
+      </Routes>
+
+      </div>
+    
+    </BrowserRouter>
+  );
 }
-export default App
+export default App;
